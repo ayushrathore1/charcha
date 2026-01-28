@@ -1,0 +1,66 @@
+# Android app
+medha-android/
+
+# Node modules
+node_modules/
+
+# Environment files (CRITICAL - contains API keys and secrets)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+medha-backend/.env
+medha-backend/.env.*
+medha-frontend/.env
+medha-frontend/.env.*
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test and debug files
+medha-backend/debug_db.js
+medha-backend/testGroq.js
+medha-backend/testMail.js
+medha-backend/testResend.js
+medha-backend/test_output.txt
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Coverage reports
+coverage/
+
+# Uploads (user uploaded files)
+medha-backend/uploads/
+
+# Build logs
+build_log*.txt
+
+# Misc sensitive files
+*.pem
+*.key
+*.crt
