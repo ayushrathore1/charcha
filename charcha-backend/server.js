@@ -12,6 +12,8 @@ const commentRoutes = require("./routes/commentRoutes");
 const voteRoutes = require("./routes/voteRoutes");
 const followRoutes = require("./routes/followRoutes");
 const mentionRoutes = require("./routes/mentionRoutes");
+const situationshipRoutes = require("./routes/situationshipRoutes");
+const nudgeRoutes = require("./routes/nudgeRoutes");
 
 // Initialize express
 const app = express();
@@ -61,6 +63,8 @@ app.use("/api", commentRoutes); // /api/posts/:postId/comments and /api/comments
 app.use("/api/votes", voteRoutes);
 app.use("/api/users", followRoutes);
 app.use("/api/mentions", mentionRoutes);
+app.use("/api/situationships", situationshipRoutes);
+app.use("/api/nudges", nudgeRoutes);
 
 // Root endpoint
 app.get("/", (req, res) => {
@@ -75,6 +79,8 @@ app.get("/", (req, res) => {
       votes: "/api/votes",
       users: "/api/users",
       mentions: "/api/mentions",
+      situationships: "/api/situationships",
+      nudges: "/api/nudges",
     },
   });
 });
@@ -114,6 +120,8 @@ app.listen(PORT, () => {
 ║   → /api/votes    - Voting system                  ║
 ║   → /api/users    - Follow/Followers               ║
 ║   → /api/mentions - @mentions                      ║
+║   → /api/situationships - CRM Tracker              ║
+║   → /api/nudges   - CRM Nudges                     ║
 ║                                                    ║
 ╚════════════════════════════════════════════════════╝
   `);
